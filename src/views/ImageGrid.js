@@ -15,23 +15,18 @@ const getRandomClassList = () => {
     return classList
 }
 
-const ImageGrid = () => {
-    return {
-        oninit: ImageList.loadImages,
-        view: () => (
-            <div class="grid">
-                <div class="grid-sizer"/>
-                {ImageList.list.map((e) => (
-                    <div class={getRandomClassList()}>
-                        {m(Image, {
-                            url: e.url,
-                            author: e.author,
-                        })}
-                    </div>
-                ))}
-            </div>
-        )
-    }
+const ImageGrid = {
+    oninit: ImageList.loadImages,
+    view: () => (
+        <div class="grid">
+            <div class="grid-sizer"/>
+            {ImageList.list.map((e) => (
+                <div class={getRandomClassList()}>
+                    <Image url={e.url} author={e.author}/>
+                </div>
+            ))}
+        </div>
+    )
 }
 
 export default ImageGrid;

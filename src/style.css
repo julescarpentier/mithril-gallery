@@ -21,7 +21,7 @@ body {
 
 .grid-sizer,
 .grid-item {
-    width: 20%;
+    width: 100%;
 }
 
 .grid-item {
@@ -30,8 +30,8 @@ body {
     padding: 4px;
 }
 
-.grid-item--width2 { width: 40% }
-.grid-item--width3 { width: 60% }
+.grid-item--width2 { width: 100% }
+.grid-item--width3 { width: 100% }
 
 .grid-item img {
     display: block;
@@ -52,3 +52,21 @@ body {
 }
 
 .grid-item:hover .author { visibility: visible; }
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+    .grid-sizer,
+    .grid-item { width: 50%}
+
+    .grid-item--width2 { width: 100% }
+    .grid-item--width3 { width: 100% }
+}
+
+/* Laptops */
+@media only screen and (min-width: 992px) {
+    .grid-sizer,
+    .grid-item { width: 20%}
+
+    .grid-item--width2 { width: 40% }
+    .grid-item--width3 { width: 60% }
+}
