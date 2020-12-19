@@ -8,3 +8,7 @@ Test du framework Mithril pour la création d'une gallerie d'image aléatoires d
 npm install
 npm build
 ```
+
+## Run
+
+Ouvrir `index.html` (dans le dossier `dist`) dans votre navigateur favori
